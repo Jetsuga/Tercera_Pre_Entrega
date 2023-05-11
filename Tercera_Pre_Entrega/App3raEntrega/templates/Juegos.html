@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoQCambia %}
+    <h4>
+    Vista de juegos agregados
+    </h4>
+    <ul>
+        <table>
+        <li>juego 1</li>
+        <li>juego 2</li>
+        <li>juego 3</li>
+    </table>
+    </ul>
+
+    <h1>Juegos agregados:</h1>
+    <ul>
+    {% for juego in Juegos %}
+        <li>{{juego.titulo}}</li>
+    {% endfor %}
+    </ul>    
+{% endblock contenidoQCambia %}

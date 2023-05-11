@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoQCambia %}
+    <p>Los juegos de ese genero son {{genero}} son:</p>
+    
+    {% if Juegos %}
+        <ul>
+            {% for Juegos in Juegos %}
+                <li>
+                    {{Juegos.titulo}} - {{Juegos.genero}}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontro juegos parae se genero</p>
+    {% endif %}
+        
+{% endblock contenidoQCambia %}

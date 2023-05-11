@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoQCambia %}
+    <h4>
+    Vista de Papas Fritas
+    </h4>
+    <ul>
+        <table>
+        <li>Pringles de Crema y cebolla</li>
+        <li>Lays clasicas</li>
+        <li>Lays de Barbacoa</li>
+    </table>
+    </ul>
+
+    <h1>PapasFritas Agregadas:</h1>
+    <ul>
+    {% for PapasFritas in PapasFritas %}
+        <li>{{PapasFritas.Paquete}}</li>
+    {% endfor %}
+    </ul>  
+{% endblock contenidoQCambia %}

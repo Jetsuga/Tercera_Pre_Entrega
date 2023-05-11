@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoQCambia %}
+    <h4>
+    Vista de Mandos
+    </h4>
+    <ul>
+        <table>
+        <li>Mando de Ps4 pro </li>
+        <li>No se </li>
+        <li>No se x2</li>
+    </table>
+    </ul>
+
+    <h1>Mandos agregados:</h1>
+    <ul>
+    {% for Mando in Mando %}
+        <li>{{Mando.Marca}}</li>
+    {% endfor %}
+    </ul>  
+{% endblock contenidoQCambia %}
